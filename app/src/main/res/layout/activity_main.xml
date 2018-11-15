@@ -17,7 +17,7 @@
         android:soundEffectsEnabled="false"
         android:text="ToggleButton"
         android:textOff="To Pressures"
-        android:textOn="Lengths" />
+        android:textOn="To Lengths" />
 
     <TableLayout
         android:layout_width="match_parent"
