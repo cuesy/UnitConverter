@@ -23,7 +23,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener, Com
             "mil", "rod", "fathom", "furlong", "km", "m", "cm", "mm", "μm", "nm"};
 
 
-    private String[] pressures= new String[] {"atmosphere", "Torr", "kPa", "Pa", "psi" };
+    private String[] pressures= new String[] {"atmosphere", "kPa", "Pa", "psi" };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

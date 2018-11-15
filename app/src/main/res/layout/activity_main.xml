@@ -13,11 +13,11 @@
         android:layout_height="wrap_content"
         android:layout_column="1"
         android:layout_gravity="right"
+        android:background="@android:drawable/btn_default"
         android:soundEffectsEnabled="false"
         android:text="ToggleButton"
-        android:textOff="Pressures"
-        android:textOn="Lengths"
-        android:background="@android:drawable/btn_default"/>
+        android:textOff="To Pressures"
+        android:textOn="Lengths" />
 
     <TableLayout
         android:layout_width="match_parent"
@@ -148,6 +148,6 @@
         android:gravity="center_horizontal"
         android:paddingLeft="25dp"
         android:paddingRight="25dp"
-        android:textSize="24sp" />
+        android:textSize="14sp" />
 
 </LinearLayout>

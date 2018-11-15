@@ -81,6 +81,9 @@ public class GetExchangeUnit implements Runnable {
         else if(unit.equals("psi"))
             unit=addBrackets(unit);
 
+        else if(unit.equals("atmosphere"))
+            unit="atm";
+
         return unit;
     }
 
