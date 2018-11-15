@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Unit Converter</string>
+    <string name="quantity">Quantity:</string>
+    <string name="source">Source:</string>
+    <string name="target">Target:</string>
+    <string name="convert">Convert</string>
+    <string name="result">Response:</string>
+    <string name="hint">X</string>
+    <string name="lengths">Lengths</string>
+    <string name="Pressures">Pressures</string>
+</resources>
