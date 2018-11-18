@@ -123,10 +123,11 @@ public class GetExchangeUnit implements Runnable {
             JSONObject jOrigin = json.getJSONObject("UCUMWebServiceResponse");
             JSONObject jResponse = jOrigin.getJSONObject("Response");
 
-            String valSource=jResponse.getString("SourceQuantity");
+            String valSource = jResponse.getString("SourceQuantity");
             String valResult = jResponse.getString("ResultQuantity");
+            System.out.println("valSource: %s " + valSource);
 
-            readableResult=valSource+" "+ sourceUnit + " = " + valResult + " " + targetUnit;
+            readableResult = valSource+" "+ sourceUnit + " = " + valResult + " " + targetUnit;
         } catch (Exception e) {
             readableResult = "Error on returned string!\n" + response;
         }
