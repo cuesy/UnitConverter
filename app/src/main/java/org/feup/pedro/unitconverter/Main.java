@@ -68,7 +68,6 @@ public class Main extends AppCompatActivity implements View.OnClickListener, Nav
         finalResult = (TextView) findViewById(R.id.tv_finalResult);
 
         ((Button) findViewById(R.id.convert)).setOnClickListener(this);
-        //((ToggleButton) findViewById(R.id.toggleButton)).setOnCheckedChangeListener(this);
 
     }
    //when we pressed the back button by our navigation drawer we don't want to leave our activity imediatly

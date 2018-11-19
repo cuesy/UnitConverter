@@ -23,18 +23,6 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-        <ToggleButton
-            android:id="@+id/toggleButton"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_gravity="right"
-            android:background="@android:drawable/btn_default"
-            android:soundEffectsEnabled="false"
-            android:text="ToggleButton"
-            android:textOff="Lengths"
-            android:textOn="Pressures" />
-
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
