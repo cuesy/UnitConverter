@@ -1,148 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".Main">
 
-    <ToggleButton
-        android:id="@+id/toggleButton"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_gravity="right"
-        android:background="@android:drawable/btn_default"
-        android:soundEffectsEnabled="false"
-        android:text="ToggleButton"
-        android:textOff="Lengths"
-        android:textOn="Pressures" />
-
-    <TableLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="25dp"
-        android:paddingRight="25dp"
-        android:paddingBottom="25dp"
-        android:stretchColumns="0,1">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TableRow
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingBottom="50dp">
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-        </TableRow>
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_gravity="right"
+            android:background="@android:drawable/btn_default"
+            android:soundEffectsEnabled="false"
+            android:text="ToggleButton"
+            android:textOff="Lengths"
+            android:textOn="Pressures" />
 
-        <TableRow
+        <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="25dp"
+            android:stretchColumns="0,1">
 
-            <TextView
-                android:id="@+id/tv_quantity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/quantity"
-                android:textColor="@color/colorAccent"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/tv_source"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="1"
-                android:text="@string/source"
-                android:textColor="@color/colorAccent"
-                android:textSize="24sp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/ed_quantity"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal|center_vertical"
-                android:background="@drawable/back"
-                android:hint="@string/hint"
-                android:inputType="numberDecimal"
-                android:imeOptions="actionDone"
-                android:textSize="18sp" />
-
-            <Spinner
-                android:id="@+id/sp_source"
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:minWidth="100dp"
-                android:paddingRight="27dp" />
+                android:layout_height="match_parent"
+                android:paddingBottom="50dp">
 
-        </TableRow>
+            </TableRow>
 
-        <TableRow
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/quantity"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tv_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:text="@string/source"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="24sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/ed_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/back"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:hint="@string/hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/sp_source"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:minWidth="100dp"
+                    android:paddingRight="27dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_target"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:text="@string/target"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="24sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Spinner
+                    android:id="@+id/sp_target"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingRight="27dp" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <Button
+            android:id="@+id/convert"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/convert"
+            android:textSize="24sp" />
 
-            <TextView
-                android:id="@+id/tv_target"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="1"
-                android:text="@string/target"
-                android:textColor="@color/colorAccent"
-                android:textSize="24sp" />
-        </TableRow>
-
-        <TableRow
+        <TextView
+            android:id="@+id/tv_result"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:text="@string/result"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp" />
 
-            <Spinner
-                android:id="@+id/sp_target"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:layout_gravity="center_horizontal"
-                android:paddingRight="27dp"
-                />
+        <TextView
+            android:id="@+id/tv_finalResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:textSize="14sp" />
+    </LinearLayout>
 
-        </TableRow>
-
-    </TableLayout>
-
-    <Button
-        android:id="@+id/convert"
+    <android.support.design.widget.NavigationView
+        android:id="@+id/sidemenu_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/convert"
-        android:textSize="24sp" />
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/sidemenu_header"
+        app:menu="@menu/side_menu" />
 
-    <TextView
-        android:id="@+id/tv_result"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="25dp"
-        android:paddingRight="25dp"
-        android:text="@string/result"
-        android:textColor="@color/colorAccent"
-        android:textSize="24sp" />
-
-    <TextView
-        android:id="@+id/tv_finalResult"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"
-        android:paddingLeft="25dp"
-        android:paddingRight="25dp"
-        android:textSize="14sp" />
-
-</LinearLayout>
+</android.support.v4.widget.DrawerLayout>

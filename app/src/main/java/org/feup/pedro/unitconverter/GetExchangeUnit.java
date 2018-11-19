@@ -125,7 +125,6 @@ public class GetExchangeUnit implements Runnable {
 
             String valSource = jResponse.getString("SourceQuantity");
             String valResult = jResponse.getString("ResultQuantity");
-            System.out.println("valSource: %s " + valSource);
 
             readableResult = valSource+" "+ sourceUnit + " = " + valResult + " " + targetUnit;
         } catch (Exception e) {

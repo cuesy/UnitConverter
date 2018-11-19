@@ -8,4 +8,7 @@
     <string name="hint">X</string>
     <string name="lengths">Lengths</string>
     <string name="Pressures">Pressures</string>
+    <string name="nav_drawer_open">Open Navigation Drawer</string>
+    <string name="nav_drawer_close">Close Navigation Drawer</string>
+    <string name="choose_your_converter">Choose your converter</string>
 </resources>
