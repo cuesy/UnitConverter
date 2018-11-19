@@ -7,8 +7,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 public class Main extends AppCompatActivity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener {
@@ -29,7 +31,6 @@ public class Main extends AppCompatActivity implements View.OnClickListener, Com
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        System.out.println("aquiaaaaaa");
         sp_source = findViewById(R.id.sp_source);
         sp_target = findViewById(R.id.sp_target);
 
@@ -53,7 +54,17 @@ public class Main extends AppCompatActivity implements View.OnClickListener, Com
     public void onClick(View v) {
         String unit = (String) sp_source.getSelectedItem();
         String targetUnit = (String) sp_target.getSelectedItem();
-        httpUnit=new GetExchangeUnit(this, unit, targetUnit);
+        String quantity_string = ((EditText) findViewById(R.id.ed_quantity)).getText().toString();
+        System.out.println(quantity_string.length());
+        if(quantity_string.length() > 0) {
+            double quantity = Double.parseDouble(quantity_string);
+            httpUnit=new GetExchangeUnit(this, unit, targetUnit, quantity);
+        }
+        else{
+            Toast.makeText(this, "No quantity to convert!", Toast.LENGTH_LONG).show();
+        }
+
+
 
     }
 
