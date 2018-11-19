@@ -20,18 +20,20 @@ public class GetExchangeUnit implements Runnable {
     private String sourceUnit;
     private String sourceUnitJSON;
     private Activity main;
+    private double quantity;
 
 
-    public GetExchangeUnit(Activity activity, String unit, String targetUnit) {
+    public GetExchangeUnit(Activity activity, String unit, String targetUnit, double quantity) {
         main = activity;
         this.targetUnit = targetUnit;
+        this.quantity=quantity;
         targetUnitJSON = checkUnits(targetUnit);
         sourceUnit = unit;
         sourceUnitJSON = checkUnits(unit);
 
         Thread thr = new Thread(this);
         thr.start();
-        System.out.println("aqui");
+
     }
 
     private String addBrackets(String unit){
@@ -55,7 +57,7 @@ public class GetExchangeUnit implements Runnable {
             unit=addBrackets("ft_i");
 
         else if (unit.equals("yard"))
-            unit=addBrackets("ya_i");
+            unit=addBrackets("yd_i");
 
         else if(unit.equals("mile"))
             unit=addBrackets("mi_i");
@@ -118,15 +120,19 @@ public class GetExchangeUnit implements Runnable {
             // "WebServiceRequest": "http://ucum.nlm.nih.gov/ucum-service/v1/ucumtransform/from/m/to/cm",
             // "Response": {"SourceQuantity": "1.0","SourceUnit": "m", "TargetUnit": "cm", "ResultQuantity": "100.0"}}*/
 
-
             JSONObject json = new JSONObject(response);
             JSONObject jOrigin = json.getJSONObject("UCUMWebServiceResponse");
             JSONObject jResponse = jOrigin.getJSONObject("Response");
 
-            String valSource = jResponse.getString("SourceQuantity");
             String valResult = jResponse.getString("ResultQuantity");
 
-            readableResult = valSource+" "+ sourceUnit + " = " + valResult + " " + targetUnit;
+
+            //we need to multiply by the input quantity:
+            double valResult_double=Double.parseDouble(valResult);
+            double aux=valResult_double*quantity;
+            valResult=String.valueOf(aux);
+
+            readableResult = String.valueOf(quantity)+" "+ sourceUnit + " = " + valResult + " " + targetUnit;
         } catch (Exception e) {
             readableResult = "Error on returned string!\n" + response;
         }
