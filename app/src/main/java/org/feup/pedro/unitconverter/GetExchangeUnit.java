@@ -10,9 +10,11 @@ import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.math.RoundingMode;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.io.InputStream;
+import java.text.DecimalFormat;
 
 public class GetExchangeUnit implements Runnable {
     private String targetUnit;
@@ -130,6 +132,9 @@ public class GetExchangeUnit implements Runnable {
             //we need to multiply by the input quantity:
             double valResult_double=Double.parseDouble(valResult);
             double aux=valResult_double*quantity;
+
+            aux = Math.round(aux*100.0) / 100.0;
+
             valResult=String.valueOf(aux);
 
             readableResult = String.valueOf(quantity)+" "+ sourceUnit + " = " + valResult + " " + targetUnit;
