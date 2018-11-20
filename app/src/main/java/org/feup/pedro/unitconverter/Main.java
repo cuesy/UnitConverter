@@ -109,25 +109,6 @@ public class Main extends AppCompatActivity implements View.OnClickListener, Nav
         });
     }
 
-    /*@Override
-    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        ArrayAdapter<String> spinnerAdpater = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, lengths);
-        ArrayAdapter<String> spinnerAdpaterP = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, pressures);
-
-        if(isChecked){
-            sp_source.setAdapter(spinnerAdpaterP);
-            sp_target.setAdapter(spinnerAdpaterP);
-            System.out.println("checked");
-        }
-
-        else{
-            sp_source.setAdapter(spinnerAdpater);
-            sp_target.setAdapter(spinnerAdpater);
-            System.out.println("unchecked");
-        }
-
-    }*/
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         ArrayAdapter<String> spinnerAdpater = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, lengths);
