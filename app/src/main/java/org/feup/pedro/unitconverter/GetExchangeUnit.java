@@ -78,7 +78,7 @@ public class GetExchangeUnit implements Runnable {
             unit=addBrackets("fur_us");
 
         else if(unit.equals("μm"))
-            unit=addBrackets("um");
+            unit="um";
 
         else if(unit.equals("psi"))
             unit=addBrackets(unit);
