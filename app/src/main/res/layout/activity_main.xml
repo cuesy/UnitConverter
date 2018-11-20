@@ -87,7 +87,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:width="140dp"
+                    android:minWidth="140dp"
                     android:paddingRight="27dp"
                     android:paddingLeft="3dp"/>
 
@@ -115,12 +115,14 @@
 
                 <Spinner
                     android:id="@+id/sp_target"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:paddingLeft="3dp"
-                    android:paddingRight="27dp"
+                    android:layout_gravity="center"
                     android:gravity="center"
+                    android:minWidth="140dp"
+                    android:paddingRight="27dp"
+                    android:paddingLeft="3dp"
                     />
 
             </TableRow>

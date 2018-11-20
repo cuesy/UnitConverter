@@ -155,7 +155,6 @@ public class Main extends AppCompatActivity implements View.OnClickListener, Nav
                 sp_source.setAdapter(spinnerAdpaterP);
                 sp_target.setAdapter(spinnerAdpaterP);
                 break;
-
         }
 
         //to close our drawer
