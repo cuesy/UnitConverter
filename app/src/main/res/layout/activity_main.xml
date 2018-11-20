@@ -88,8 +88,8 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:minWidth="140dp"
-                    android:paddingRight="27dp"
-                    android:paddingLeft="3dp"/>
+                    android:paddingEnd="27dp"
+                    android:paddingStart="3dp"/>
 
             </TableRow>
 
@@ -121,8 +121,8 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:minWidth="140dp"
-                    android:paddingRight="27dp"
-                    android:paddingLeft="3dp"
+                    android:paddingEnd="27dp"
+                    android:paddingStart="3dp"
                     />
 
             </TableRow>

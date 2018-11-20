@@ -29,7 +29,7 @@
             android:paddingLeft="25dp"
             android:paddingRight="25dp"
             android:paddingBottom="25dp"
-            android:stretchColumns="0,1">
+            android:stretchColumns="0,1,2">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -92,8 +92,8 @@
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:gravity="center"
                     android:minWidth="140dp"
-                    android:paddingRight="27dp"
-                    android:paddingLeft="3dp"/>
+                    android:paddingEnd="27dp"
+                    android:paddingStart="3dp"/>
 
                 <Spinner
                     android:id="@+id/sp_target"
@@ -102,8 +102,8 @@
                     android:layout_gravity="center_horizontal|center_vertical"
                     android:minWidth="140dp"
                     android:gravity="center"
-                    android:paddingLeft="3dp"
-                    android:paddingRight="27dp" />
+                    android:paddingStart="3dp"
+                    android:paddingEnd="27dp" />
 
             </TableRow>
 
