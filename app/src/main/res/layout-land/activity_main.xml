@@ -33,13 +33,6 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingBottom="50dp">
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <TextView
@@ -152,27 +145,16 @@
             android:textColor="@color/colorAccent"
             android:textSize="24sp" />
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/tv_finalResult"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
             android:paddingLeft="25dp"
+            android:background="@drawable/back"
             android:paddingRight="25dp"
-            android:height="100dp">
-
-            <TextView
-                android:id="@+id/tv_finalResult"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/back"
-                android:gravity="center_horizontal|center_vertical"
-                android:paddingLeft="25dp"
-                android:paddingRight="25dp"
-                android:maxLines="2"
-                android:textSize="14sp" />
-        </LinearLayout>
-
+            android:textSize="14sp" />
     </LinearLayout>
 
     <android.support.design.widget.NavigationView

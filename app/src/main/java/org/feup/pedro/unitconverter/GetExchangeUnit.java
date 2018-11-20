@@ -133,8 +133,6 @@ public class GetExchangeUnit implements Runnable {
             double valResult_double=Double.parseDouble(valResult);
             double aux=valResult_double*quantity;
 
-            aux = Math.round(aux*100.0) / 100.0;
-
             valResult=String.valueOf(aux);
 
             readableResult = String.valueOf(quantity)+" "+ sourceUnit + " = " + valResult + " " + targetUnit;
