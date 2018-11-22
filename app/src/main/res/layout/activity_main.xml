@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimary"
-            android:elevation="4dp"
+
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
@@ -114,6 +114,7 @@
                 android:layout_height="match_parent">
 
                 <Spinner
+
                     android:id="@+id/sp_target"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"

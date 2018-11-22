@@ -6,15 +6,18 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+
+
+
         <item name="spinnerStyle">@style/Widget.App.Spinner</item>
         <item name="android:spinnerStyle">@style/Widget.App.Spinner</item>
     </style>
 
     <style name="Widget.App.Spinner" parent="@style/Widget.AppCompat.Spinner">
         <item name="overlapAnchor">true</item>
-        <item name="android:background">@drawable/spinrect</item>
+        <item name="android:background">@drawable/spinner_rect</item>
     </style>
+
 
     <!--
     <style name="AppTheme.NoActionBar">

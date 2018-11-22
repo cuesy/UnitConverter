@@ -24,6 +24,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import java.io.Serializable;
+
 public class Main extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
 
     private Spinner sp_source;
@@ -35,7 +37,6 @@ public class Main extends AppCompatActivity implements View.OnClickListener, Nav
     //create a list of items for the spinner.
     private String[] lengths = new String[]{"Ångstrom", "Smoot", "inch", "foot", "yard", "mile", "nautical mile",
             "mil", "rod", "fathom", "furlong", "km", "m", "cm", "mm", "μm", "nm"};
-
 
     private String[] pressures= new String[] {"atmosphere", "kPa", "Pa", "psi" };
 
@@ -112,7 +113,6 @@ public class Main extends AppCompatActivity implements View.OnClickListener, Nav
         });
     }
 
-
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         View v = getCurrentFocus();
@@ -139,9 +139,6 @@ public class Main extends AppCompatActivity implements View.OnClickListener, Nav
         }
     }
 
-
-
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         ArrayAdapter<String> spinnerAdpater = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, lengths);
@@ -161,4 +158,19 @@ public class Main extends AppCompatActivity implements View.OnClickListener, Nav
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putSerializable("save", finalResult.getText().toString());
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        String quantity_out = (String) savedInstanceState.getSerializable("save");
+        finalResult.setText(quantity_out);
+        super.onRestoreInstanceState(savedInstanceState);
+    }
+
+
 }
